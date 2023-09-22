@@ -4,6 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
+    scannerHome = tool "SonarScanner"
     HEROKU_API_KEY = credentials('darinpope-heroku-api-key')
   }
   parameters { 
